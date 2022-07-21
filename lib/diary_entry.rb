@@ -46,17 +46,32 @@ class DiaryEntry
       # 1 overall minute to read 2 words
 
       arr = @contents.split(" ")
-      end_at = wpm * minutes
+      end_at = wpm * minutes #fixed
     
       chunk_array = arr[@start, end_at] # [start = 0, words_pc = 2] [hello, world]
       @start = @start + end_at #0 + 2 = 2
       #second_chunk_array = arr[@start, words_pc] #[start = 2, words_pc = 2] [rise, and]
+      #@start = @start + end_at #2 + 2 = 4 
+      #third_chunk_array = arr[@start, words_pc] #[start = 4, words_pc = 2] [shine]
+      #@start = @start + end_at #4 + 2 = 6
+      #arr.length = 5
+      
+
+      if @start > arr.length
+         @start = 0
+      else
+         @start
+      end
+      
       return chunk_array.join(" ") 
     
     end
   end
 
 diary = DiaryEntry.new("title", "hello world rise and shine")
+puts diary.reading_chunk(2, 1)
+puts diary.reading_chunk(2, 1)
+puts diary.reading_chunk(2, 1)
 puts diary.reading_chunk(2, 1)
 puts diary.reading_chunk(2, 1)
 puts diary.reading_chunk(2, 1)

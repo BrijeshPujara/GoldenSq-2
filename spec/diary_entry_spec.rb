@@ -34,5 +34,13 @@ RSpec.describe DiaryEntry do
       expect(second_chunk).to eq "rise and"
   end
 
+  it "restarts from the beginning when the contents have been fully read" do
+    diary = DiaryEntry.new("title", "hello world rise and shine")
+    diary.reading_chunk(2, 1)
+    diary.reading_chunk(2, 1)
+    diary.reading_chunk(2, 1)
+    reset = diary.reading_chunk(2, 1)
+    expect(reset).to eq "hello world"
+  end
 
 end
