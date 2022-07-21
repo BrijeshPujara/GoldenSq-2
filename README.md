@@ -34,4 +34,10 @@ calculate_reading_time(THREE_HUNDRED_WORDS)
 
 # 5
 calculate_reading_time(FOUR_HUNDRED_WORDS)
+
 ```
+
+# 4. Implement the Behaviour
+
+
+

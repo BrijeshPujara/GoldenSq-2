@@ -15,7 +15,12 @@ RSpec.describe "calculate_reading_time method" do
     end    
 
     it "returns 0 if an empty string has been entered" do
-        expect(calculate_reading_time("")).to eq 0 
+        expect(calculate_reading_time("one " * 300)).to eq 2 
+        
+    end    
+
+    it "returns 0 if an empty string has been entered" do
+        expect(calculate_reading_time("one " * 400)).to eq 2 
         
     end    
         
