@@ -25,19 +25,23 @@ calculate_reading_time("")
 
 # 2
 calculate_reading_time("one")
+# => 1
 
 # 3
 calculate_reading_time(TWO_HUNDRED_WORDS)
+# => 1
 
 # 4
 calculate_reading_time(THREE_HUNDRED_WORDS)
+# => 2
 
 # 5
 calculate_reading_time(FOUR_HUNDRED_WORDS)
+# => 2
 
 ```
 
-# 4. Implement the Behaviour
+## 4. Implement the Behaviour
 
 
 
