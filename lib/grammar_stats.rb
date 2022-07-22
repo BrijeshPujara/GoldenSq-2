@@ -45,3 +45,5 @@ class GrammarStats
   grammar.check("Hello World!")
   grammar.check("hello World")
   puts grammar.percentage_good
+
+  #testing one two three
