@@ -17,7 +17,7 @@ class Todo
     
     @todo_list.each do |i|
       if i.include? task
-        return"This task has been completed"
+        return "This task has been completed!"
       end 
     end
   end
